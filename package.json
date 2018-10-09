@@ -1,0 +1,34 @@
+{
+    "name": "dc-rollup",
+    "version": "0.0.1",
+    "license": "Apache-2.0",
+    "copyright": "2018",
+    "description": "Testing rollup for dc.js",
+    "keywords": [
+        "dc",
+        "crossfilter",
+        "d3"
+    ],
+    "homepage": "http://dc-js.github.io/dc.parallel-coordinates.js-rollup",
+    "bugs": "https://github.com/dc-js/dc-rollup/issues",
+    "author": {
+        "name": "Gordon Woodhull",
+        "url": "http://gordon.woodhull.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/dc-js/dc-rollup.git"
+    },
+    "dependencies": {
+        "crossfilter2": "~1.4",
+        "dc": "~3.0.0",
+        "d3": "5.x"
+    },
+    "devDependencies": {
+        "rollup": "~0.66",
+        "rollup-plugin-node-resolve": "^3.4.0"
+    },
+    "scripts": {
+        "test": "grunt test"
+    }
+}
