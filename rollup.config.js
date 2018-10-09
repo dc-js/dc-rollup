@@ -1,8 +1,8 @@
 import resolve from 'rollup-plugin-node-resolve';
-import sourcemaps from 'rollup-plugin-sourcemaps';
-import json from 'rollup-plugin-json';
-//import commonjs from 'rollup-plugin-commonjs';
 import globals from 'rollup-plugin-node-globals';
+import commonjs from 'rollup-plugin-commonjs';
+import json from 'rollup-plugin-json';
+import sourcemaps from 'rollup-plugin-sourcemaps';
 
 function onwarn (warning, warn) {
   if (warning.code === 'CIRCULAR_DEPENDENCY') return;
@@ -17,7 +17,7 @@ export default {
     name: 'dcjs_rollup',
     file: 'bundle.js',
     format: 'iife',
-    sourceMap: true,
+    //sourceMap: true,
     globals: {
       'd3': 'd3',
       'dc': 'dc',
@@ -34,7 +34,7 @@ export default {
     }),
     sourcemaps(),
     json(),
-    //commonjs(),
+    commonjs(),
     globals(),
 
   ]
