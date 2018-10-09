@@ -1,4 +1,8 @@
 import resolve from 'rollup-plugin-node-resolve';
+import sourcemaps from 'rollup-plugin-sourcemaps';
+import json from 'rollup-plugin-json';
+//import commonjs from 'rollup-plugin-commonjs';
+import globals from 'rollup-plugin-node-globals';
 
 function onwarn (warning, warn) {
   if (warning.code === 'CIRCULAR_DEPENDENCY') return;
@@ -30,7 +34,7 @@ export default {
     }),
     sourcemaps(),
     json(),
-    commonjs(),
+    //commonjs(),
     globals(),
 
   ]
