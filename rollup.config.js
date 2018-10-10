@@ -3,6 +3,7 @@ import globals from 'rollup-plugin-node-globals';
 import commonjs from 'rollup-plugin-commonjs';
 import json from 'rollup-plugin-json';
 import sourcemaps from 'rollup-plugin-sourcemaps';
+import amd from 'rollup-plugin-amd';
 
 function onwarn (warning, warn) {
   if (warning.code === 'CIRCULAR_DEPENDENCY') return;
@@ -32,6 +33,7 @@ export default {
       main: true,
       browser: true
     }),
+    amd(),
     sourcemaps(),
     json(),
     commonjs(),

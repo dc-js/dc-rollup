@@ -26,6 +26,7 @@
     },
     "devDependencies": {
         "rollup": "~0.66",
+        "rollup-plugin-amd": "^3.0.0",
         "rollup-plugin-commonjs": "^8.3",
         "rollup-plugin-json": "^3.1.0",
         "rollup-plugin-node-globals": "^1.4.0",
